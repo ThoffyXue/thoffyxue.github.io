@@ -1,66 +1,78 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>薛鹏飞</title>
     <style>
-        div{
+
+
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(images/bbb.jpg) no-repeat;
+        }
+        .box {
             width: 300px;
             height: 100px;
             margin: 50px auto;
             text-align: center;
+            
         }
 
-        a{
+        a {
             text-decoration: none;
+            color: white;
         }
-    
-	       .walk_show{
-            width:120px;
-            height:182px;
-            border:1px solid #333;
-            margin:50px auto 0;
-            overflow:hidden;
-            position:relative;            
+
+        .walk_show {
+            width: 120px;
+            height: 182px;
+            border: 1px solid #333;
+            margin: 50px auto 0;
+            overflow: hidden;
+            position: relative;
         }
-        .walk_show img{
-            position:absolute;
-            left:0px;
-            top:0px;
+
+        .walk_show img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
         }
     </style>
-	    <script type="text/javascript">
-       /*
-		  制作关键帧动画：
-		  提示：通过定时器，定时改变div中的img的left属性值，img是定位在div中的，每次改变的值为120px，建议100毫秒改变一次，时间间隔还可以更长一点，通过调整设置最佳的时间间隔。
+    <script type="text/javascript">
+        /*
+           制作关键帧动画：
+           提示：通过定时器，定时改变div中的img的left属性值，img是定位在div中的，每次改变的值为120px，建议100毫秒改变一次，时间间隔还可以更长一点，通过调整设置最佳的时间间隔。
+ 
+        */
 
-       */
-
-       window.onload = function(){
-           var oImg = document.getElementById("img01");
+        window.onload = function () {
+            var oImg = document.getElementById("img01");
 
             var num = 0;
-           setInterval(function(){
-               num += -120;
-               if(num <= -960){
-                    num= 0;
-               }
-               oImg.style.left = num +"px";
-           },150);
-       }
+            setInterval(function () {
+                num += -120;
+                if (num <= -960) {
+                    num = 0;
+                }
+                oImg.style.left = num + "px";
+            }, 150);
+        }
 
     </script>
 </head>
+
 <body>
-    <div>
+    <div class="box" >
         <a href="http://blog.csdn.net/ThoffyXue/article/details/78607922">薛鹏飞</a>
-		   <!-- <p>使用下面这张图片制作关键帧动画</p> -->
-			<!-- <img src="images/walking.png" alt="人物走路"> -->
-    <div class="walk_show">
-        <img src="images/walking.png" alt="人物走路" id="img01">
-    </div>
+        <!-- <p>使用下面这张图片制作关键帧动画</p> -->
+        <!-- <img src="images/walking.png" alt="人物走路"> -->
+        <div class="walk_show">
+            <img src="images/walking.png" alt="人物走路" id="img01">
+        </div>
     </div>
 </body>
 </html>
